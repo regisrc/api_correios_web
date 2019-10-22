@@ -1,14 +1,62 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Utils/styles.css" rel="stylesheet" />
 </head>
-<body>
 
+<body class="bg-dark">
+    <section class="container bg-primary h-100">
+        <div class="row h-100 align-items-center">
+            <div class="card m-5 w-100">
+                <div class="card-header bg-dark">
+                    <h3 class="text-primary text-center">
+                        API Correio
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="text" id="nCdServico"
+                                placeholder="Codigo de Serviço"></div>
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="text" id="nCepOrigem"
+                                placeholder="CEP de Origem"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="text" id="nCepDestino"
+                                placeholder="CEP de Destino"></div>
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="number" id="nVlPeso"
+                                placeholder="Valor Peso"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="number" id="nVlComprimento"
+                                placeholder="Valor Comprimento"></div>
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="number" id="nVlAltura"
+                                placeholder="Valor Altura"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="number" id="nVlLargura"
+                                placeholder="Valor Largura"></div>
+                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="number" id="nVlDiametro"
+                                placeholder="Valor Diametro"></div>
+                    </div>
+
+                    <hr/>   
+
+                    <div class="row align-items-center text-center">
+                        <div class="col-md-12"><input class="w-25 mt-2 mb-2" type="button" id="nVlLargura"
+                                value="Enviar"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/inputmask/min/inputmask.min.js"></script>
     <script src="Utils/scripts.js"></script>
 </body>
+
 </html>
