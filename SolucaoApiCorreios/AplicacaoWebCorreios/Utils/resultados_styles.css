@@ -1,10 +1,9 @@
 ﻿body {
     height: 100vh;
-    background-image: url('img/fundo1.jpeg');
+    background-image: url('img/fundo2.gif');
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .card {
     background: #ffffffed;
 }

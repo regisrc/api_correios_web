@@ -74,6 +74,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="index.html" />
+    <Content Include="resultados.html" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -129,6 +130,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Utils\resultados_script.js" />
+    <Content Include="Utils\resultados_styles.css" />
     <Content Include="Utils\scripts.js" />
     <Content Include="Utils\styles.css" />
     <Content Include="Web.config" />
