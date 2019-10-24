@@ -10,70 +10,184 @@
 
 <body>
     <section class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="card m-5  w-100">
+        <div class="row h-100 align-items-center justify-content-center">
+            <div class="card m-5  w-75">
                 <div class="card-header bg-dark">
                     <h3 class="text-primary text-center">
                         API Correio
                     </h3>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <select id="nCdServico" class="w-100 mt-2 mb-2">
-                                <option value="04014">04014 SEDEX à vista</option>
-                                <option value="04065">04065 SEDEX à vista pagamento na entrega</option>
-                                <option value="04510">04510 PAC à vista</option>
-                                <option value="04707">04707 PAC à vista pagamento na entrega</option>
-                                <option value="40169">40169 SEDEX 12 ( à vista e a faturar)*</option>
-                                <option value="40215">40215 SEDEX 10 (à vista e a faturar)*</option>
-                                <option value="40290">40290 SEDEX Hoje Varejo*</option>
-                            </select>
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Tipo de serviço</label>
+                                <div class="form-group">
+                                    <select id="nCdServico" class="custom-select" required>
+                                        <option value="">Clique aqui para selecionar</option>
+                                        <option value="04014">04014 SEDEX à vista</option>
+                                        <option value="04065">04065 SEDEX à vista pagamento na entrega</option>
+                                        <option value="04510">04510 PAC à vista</option>
+                                        <option value="04707">04707 PAC à vista pagamento na entrega</option>
+                                        <option value="40169">40169 SEDEX 12 (à vista e a faturar)*</option>
+                                        <option value="40215">40215 SEDEX 10 (à vista e a faturar)*</option>
+                                        <option value="40290">40290 SEDEX Hoje Varejo*</option>
+                                    </select>
+                                    <div class="invalid-feedback">Selecione um campo</div>
+                                </div>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom02">CEP Origem</label>
+                                <input class="form-control" type="text" id="sCepOrigem" placeholder="Insira o CEP origem aqui" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom03">CEP Destino</label>
+                                <input class="form-control" type="text" id="sCepDestino" placeholder="Insira o CEP destino aqui" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="text" id="sCepOrigem" value="89057520"
-                                placeholder="CEP de Origem"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="text" id="sCepDestino" value="89050130"
-                                placeholder="CEP de Destino"></div>
-                        <div class="col-md-6"><input class="w-100 mt-2 mb-2" type="number" id="nVlPeso" value="2"
-                                placeholder="Valor Peso"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="number" id="nVlComprimento" value="40"
-                                   placeholder="Valor Comprimento">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="validationCustom04">Formato de envio</label>
+                                <div class="form-group">
+                                    <select id="nCdFormato" class="custom-select" required>
+                                        <option value="">Clique aqui para selecionar</option>
+                                        <option value="1">Formato caixa/pacote</option>
+                                        <option value="2">Formato rolo/prisma</option>
+                                        <option value="3">Envelope</option>
+                                    </select>
+                                    <div class="invalid-feedback">Selecione um campo</div>
+                                </div>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom05">Peso</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="number" id="nVlPeso" value="5" placeholder="Kg" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">Kg</span>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 ">
+                                <label for="validationCustom06">Comprimento</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="number" id="nVlComprimento" value="40" placeholder="cm" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">cm</span>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom07">Largura</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="number" id="nVlLargura" value="20" placeholder="cm" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">cm</span>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="number" id="nVlAltura" value="20"
-                                   placeholder="Valor Altura">
+                        <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="validationCustom08">Altura</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="number" id="nVlAltura"  value="20" placeholder="cm" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">cm</span>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="validationCustom09">Diâmetro</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="number" id="nVlDiametro"  placeholder="cm" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text bg-dark text-primary"  id="inputGroupPeso">cm</span>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="number" id="nVlLargura" value="20"
-                                   placeholder="Valor Largura">
+                        <div class="form-row align-content-center justify-content-center"   >
+                            <div class="col-md-2 mb-3">
+                                <label for="validationCustom09">Mão Propria</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="sCdMaoPropria1" value="s" name="maoPropria" required>
+                                    <label class="custom-control-label" for="sCdMaoPropria1">Sim</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-3">
+                                    <input type="radio" class="custom-control-input" id="sCdMaoPropria2" value="n" name="maoPropria" required>
+                                    <label class="custom-control-label" for="sCdMaoPropria2">Não</label>
+                                    <div class="invalid-feedback">Selecione uma opção</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom09">Aviso de Recebimento</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="sCdAvisoRecebimento1" value="s" name="avisoReceb" required>
+                                    <label class="custom-control-label" for="sCdAvisoRecebimento1">Sim</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-3">
+                                    <input type="radio" class="custom-control-input" id="sCdAvisoRecebimento2" value="n" name="avisoReceb" required>
+                                    <label class="custom-control-label" for="sCdAvisoRecebimento2">Não</label>
+                                    <div class="invalid-feedback">Selecione uma opção</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom10">Valor Declarado</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">R$</span>
+                                    </div>
+                                    <input class="form-control" type="number" id="nVlValorDeclarado" value="0" placeholder="Valor em reais" required>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <input disabled class="w-100 mt-2 mb-2" type="number" id="nVlDiametro" value="0"
-                                   placeholder="Valor Diametro">
-                        </div>
-                    </div>
+                    </form>
+                        <hr />
 
-                    <hr />
-
-                    <div class="row align-items-center text-center">
-                        <div class="col-md-12">
-                            <input class="btn btn-primary w-25 mt-2 mb-2" type="button" id="buttonEnviar"
-                                   value="Enviar">
+                        <div class="row align-items-center text-center">
+                            <div class="col-md-12">
+                                <input class="btn btn-primary w-25 mt-2 mb-2" type="button" id="buttonEnviar"
+                                       value="Enviar">
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
     <script src="Scripts/jquery-3.4.1.min.js"></script>
-    <script src="Scripts/inputmask/min/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="Utils/scripts.js"></script>
 </body>
 

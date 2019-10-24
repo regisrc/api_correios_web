@@ -10,55 +10,92 @@
 
 <body>
     <section class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="card m-5 w-100">
+        <div class="row h-100 align-items-center justify-content-center">
+            <div class="card m-5 w-auto">
                 <div class="card-header bg-dark">
                     <h3 class="text-primary text-center">
-                        Resultados
+                        Informaçoes do Pedido
                     </h3>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="prazoEntrega"/>
-                        </div>
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="valor" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="valorMao" />
-                        </div>
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="valorReceb" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="valorSemAdd" />
-                        </div>
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="valorDec" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="entregaDomicilio" />
-                        </div>
-                        <div class="col-md-6">
-                            <input class="w-100 mt-2 mb-2" type="text" id="entregaSab" />
-                        </div>
-                    </div>
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom012">Tipo de Serviço</label>
+                                <input class="form-control bg-white" type="text" id="codServico" disabled>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Prazo de Entrega</label>
+                                <div class="input-group">
+                                    <input class="form-control text-center bg-white" type="text" id="prazoEntrega" disabled>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="inputGroupPeso">Dias</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <!--<hr />-->
-
-                    <!--<div class="row align-items-center text-center">
-                        <div class="col-md-12">
-                            <input class="w-25 mt-2 mb-2" type="button" id="buttonEnviar"
-                                   value="Enviar">
                         </div>
-                    </div>-->
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom02">Entrega Sábado?</label>
+                                <input class="form-control bg-white" type="text" id="entregaSab" disabled>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom02">Entrega a Domicílio?</label>
+                                <input class="form-control bg-white" type="text" id="entregaDomicilio" disabled>
+                            </div>
+                        </div>
+                            
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Adicional Mão Propria</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPeso">R$</span>
+                                    </div>
+                                    <input class="form-control bg-white" type="text" id="valorMao" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Adicional Aviso Recebimento</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPeso">R$</span>
+                                    </div>
+                                    <input class="form-control bg-white" type="text" id="valorReceb" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Valor Declarado</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPeso">R$</span>
+                                    </div>
+                                    <input class="form-control bg-white" type="text" id="valorDec" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row  justify-content-xl-center">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Total Sem Adicionais</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPeso">R$</span>
+                                    </div>
+                                    <input class="form-control bg-white" type="text" id="valorSemAdd" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Valor Total</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPeso">R$</span>
+                                    </div>
+                                    <input class="form-control bg-white" type="text" id="valor" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
