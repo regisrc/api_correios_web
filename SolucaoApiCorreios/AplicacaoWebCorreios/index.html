@@ -18,12 +18,12 @@
                     </h3>
                 </div>
                 <div class="card-body">
-                    <form class="needs-validation" novalidate>
+                    <form id="form_principal" class="needs-validation" novalidate>
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Tipo de serviço</label>
                                 <div class="form-group">
-                                    <select id="nCdServico" class="custom-select" required>
+                                    <select name="nCdServico" id="nCdServico" class="custom-select" required>
                                         <option value="">Clique aqui para selecionar</option>
                                         <option value="04014">04014 SEDEX à vista</option>
                                         <option value="04065">04065 SEDEX à vista pagamento na entrega</option>
@@ -41,14 +41,14 @@
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom02">CEP Origem</label>
-                                <input class="form-control" type="text" id="sCepOrigem" placeholder="Insira o CEP origem aqui" required>
+                                <input class="form-control" type="text" name="sCepOrigem" id="sCepOrigem" placeholder="Insira o CEP origem aqui" required>
                                 <div class="valid-feedback">
                                     Tudo certo!
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom03">CEP Destino</label>
-                                <input class="form-control" type="text" id="sCepDestino" placeholder="Insira o CEP destino aqui" required>
+                                <input class="form-control" type="text" name="sCepDestino" id="sCepDestino" placeholder="Insira o CEP destino aqui" required>
                                 <div class="valid-feedback">
                                     Tudo certo!
                                 </div>
@@ -58,7 +58,7 @@
                             <div class="col-md-6">
                                 <label for="validationCustom04">Formato de envio</label>
                                 <div class="form-group">
-                                    <select id="nCdFormato" class="custom-select" required>
+                                    <select id="nCdFormato" name="nCdFormato" class="custom-select" required>
                                         <option value="">Clique aqui para selecionar</option>
                                         <option value="1">Formato caixa/pacote</option>
                                         <option value="2">Formato rolo/prisma</option>
@@ -73,7 +73,7 @@
                             <div class="col-md-2">
                                 <label for="validationCustom05">Peso</label>
                                 <div class="input-group">
-                                    <input class="form-control" type="number" id="nVlPeso" value="5" placeholder="Kg" required>
+                                    <input class="form-control" type="number" name="nVlPeso" id="nVlPeso" value="5" placeholder="Kg" required>
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">Kg</span>
                                     </div>
@@ -85,7 +85,7 @@
                             <div class="col-md-2 ">
                                 <label for="validationCustom06">Comprimento</label>
                                 <div class="input-group">
-                                    <input class="form-control" type="number" id="nVlComprimento" value="40" placeholder="cm" required>
+                                    <input class="form-control" type="number" name="nVlComprimento" id="nVlComprimento" value="40" placeholder="cm" required>
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">cm</span>
                                     </div>
@@ -97,7 +97,7 @@
                             <div class="col-md-2">
                                 <label for="validationCustom07">Largura</label>
                                 <div class="input-group">
-                                    <input class="form-control" type="number" id="nVlLargura" value="20" placeholder="cm" required>
+                                    <input class="form-control" type="number" name="nVlLargura" id="nVlLargura" value="20" placeholder="cm" required>
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">cm</span>
                                     </div>
@@ -113,7 +113,7 @@
                             <div class="col-md-2 mb-3">
                                 <label for="validationCustom08">Altura</label>
                                 <div class="input-group">
-                                    <input class="form-control" type="number" id="nVlAltura"  value="20" placeholder="cm" required>
+                                    <input class="form-control" type="number" id="nVlAltura" name="nVlAltura" value="20" placeholder="cm" required>
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">cm</span>
                                     </div>
@@ -125,7 +125,7 @@
                             <div class="col-md-2 mb-3">
                                 <label for="validationCustom09">Diâmetro</label>
                                 <div class="input-group">
-                                    <input class="form-control" type="number" id="nVlDiametro"  placeholder="cm" required>
+                                    <input class="form-control" type="number" id="nVlDiametro" name="nVlDiametro" placeholder="cm" required>
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-dark text-primary"  id="inputGroupPeso">cm</span>
                                     </div>
@@ -139,11 +139,11 @@
                             <div class="col-md-2 mb-3">
                                 <label for="validationCustom09">Mão Propria</label>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="sCdMaoPropria1" value="s" name="maoPropria" required>
+                                    <input type="radio" class="custom-control-input" id="sCdMaoPropria1" value="s" name="sCdMaoPropria" required>
                                     <label class="custom-control-label" for="sCdMaoPropria1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio mb-3">
-                                    <input type="radio" class="custom-control-input" id="sCdMaoPropria2" value="n" name="maoPropria" required>
+                                    <input type="radio" class="custom-control-input" id="sCdMaoPropria2" value="n" name="sCdMaoPropria" required>
                                     <label class="custom-control-label" for="sCdMaoPropria2">Não</label>
                                     <div class="invalid-feedback">Selecione uma opção</div>
                                 </div>
@@ -151,11 +151,11 @@
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom09">Aviso de Recebimento</label>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="sCdAvisoRecebimento1" value="s" name="avisoReceb" required>
+                                    <input type="radio" class="custom-control-input" id="sCdAvisoRecebimento1" value="s" name="sCdAvisoRecebimento" required>
                                     <label class="custom-control-label" for="sCdAvisoRecebimento1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio mb-3">
-                                    <input type="radio" class="custom-control-input" id="sCdAvisoRecebimento2" value="n" name="avisoReceb" required>
+                                    <input type="radio" class="custom-control-input" id="sCdAvisoRecebimento2" value="n" name="sCdAvisoRecebimento" required>
                                     <label class="custom-control-label" for="sCdAvisoRecebimento2">Não</label>
                                     <div class="invalid-feedback">Selecione uma opção</div>
                                 </div>
@@ -166,7 +166,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-dark text-primary" id="inputGroupPeso">R$</span>
                                     </div>
-                                    <input class="form-control" type="number" id="nVlValorDeclarado" value="0" placeholder="Valor em reais" required>
+                                    <input class="form-control" type="number" id="nVlValorDeclarado" name="nVlValorDeclarado" value="0" placeholder="Valor em reais" required>
                                     <div class="valid-feedback">
                                         Tudo certo!
                                     </div>
