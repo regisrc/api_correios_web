@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-    switch (queryString("codServico")) {
+    switch (queryString("Codigo")) {
 
         case "04014":
             $('#codServico').val("04014 SEDEX à vista");
@@ -27,7 +27,7 @@
 
     }
 
-    switch (queryString("entregaDomicilio")) {
+    switch (queryString("EntregaDomiciliar")) {
 
     case "S":
         $('#entregaDomicilio').val("Tem entrega a domicílio");
@@ -36,7 +36,7 @@
         $('#entregaDomicilio').val("Não tem entrega a domicílio");
         break;
     }
-    switch (queryString("entregaSab")) {
+    switch (queryString("EntregaSabado")) {
 
     case "S":
         $('#entregaSab').val("Entrega sábado!");
@@ -45,12 +45,12 @@
         $('#entregaSab').val("Não entrega sábado");
         break;
     }
-    $('#prazoEntrega').val(queryString("prazoEntrega"));
-    $('#valor').val(queryString("valor"));
-    $('#valorReceb').val(queryString("valorReceb"));
-    $('#valorMao').val(queryString("valorMao"));
-    $('#valorSemAdd').val(queryString("valorSemAdd"));
-    $('#valorDec').val(queryString("valorDec"));
+    $('#prazoEntrega').val(queryString("PrazoEntrega"));
+    $('#valor').val(queryString("Valor"));
+    $('#valorReceb').val(queryString("ValorAvisoRecebimento"));
+    $('#valorMao').val(queryString("ValorMaoPropria"));
+    $('#valorSemAdd').val(queryString("ValorSemAdicionais"));
+    $('#valorDec').val(queryString("ValorValorDeclarado"));
 
 });
 
